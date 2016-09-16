@@ -14,8 +14,8 @@ Gem::Specification.new do |s|
   s.files         = Dir['lib/**/*.rb']
   s.require_paths = ['lib']
 
-  s.add_dependency 'aspector', '~> 0.14.0'
-  s.add_dependency 'statful-client', '~> 1.0.0'
+  s.add_runtime_dependency 'aspector', '= 0.14.0'
+  s.add_runtime_dependency 'statful-client', '~> 1.0'
 
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'yard'
