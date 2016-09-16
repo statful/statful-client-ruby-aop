@@ -1,4 +1,4 @@
-Statful Ruby Client for Aspect-Oriented Programming
+Statful client for Ruby applications using Aspect-Oriented Programming
 ==============
 
 Statful client for Ruby applications using Aspect-Oriented Programming.
@@ -6,7 +6,7 @@ Statful client for Ruby applications using Aspect-Oriented Programming.
 [![Build Status](https://travis-ci.org/statful/statful-client-ruby-aop.svg?branch=master)](https://travis-ci.org/statful/statful-client-ruby-aop)
 [![Gem Version](https://badge.fury.io/rb/statful-client-aop.svg)](https://badge.fury.io/rb/statful-client-aop)
 
-Staful Ruby client for AOP. This client is intended to gather metrics and send them to Statful.
+Staful client for Ruby usgin AOP. This client is intended to gather metrics and send them to Statful.
 
 ## Table of Contents
 
@@ -33,7 +33,7 @@ $ gem install statful-client-aop
 
 ## Quick start
 
-This gem requires a valid initialized statful client - refer to the [documentation](https://github.com/statful/statful-client-ruby) on how to do it. 
+This gem requires a valid initialized statful client - refer to the [documentation](https://github.com/statful/statful-client-ruby) on how to do it.
 
 ```ruby
 require 'statful-client-aop'
@@ -56,10 +56,9 @@ Creates a simple client configuration and use it to send some metrics.
 ```ruby
 # consider statful_aspects is an instance of the previously created StatfulAspects
 
-class MyClass 
-
+class MyClass
   # measure how long my_method takes to execute in ms
-  # save it as a metric timer called 'execution' with a custom tag 
+  # save it as a metric timer called 'execution' with a custom tag
   statful_aspects.timer(self, 'my_method', 'execution', { :tags => {:host => 'test_host', :status => 'SUCCESS' } })
   def my_method
     # do stuff
@@ -85,7 +84,7 @@ The custom options that can be set on config param are detailed below.
 - staful_aspects.timer(myClass, 'my_method', 'my_metric_name', { :namespace => 'sandbox' });
 ```
 
-Arguments for the `timer` method is much like the `timer` method from the Ruby client with the exceptions:
+Arguments for the `timer` method are much like the `timer` method from the Ruby client with the exceptions:
 
 * the first argument is the class [`Object`] of the method to be annotated
 * the second argument is the name [`String`] of the method to be annotated
@@ -116,7 +115,7 @@ $ rake spec
 Use gem to build a gem according to the spec if required:
 
 ```
-$ gem build statful-ruby.gemspec
+$ gem build statful-client-aop.gemspec
 ```
 
 ### Docs
@@ -135,4 +134,4 @@ $ rake yard
 
 ## License
 
-Statful Ruby Client is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/statful/statful-client-ruby/master/LICENSE) file for more information.
+Statful Client For Ruby using AOP is available under the MIT license. See the [LICENSE](https://raw.githubusercontent.com/statful/statful-client-ruby/master/LICENSE) file for more information.
