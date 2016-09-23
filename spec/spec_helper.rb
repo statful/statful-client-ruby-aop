@@ -30,4 +30,4 @@ end
 
 Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new({:color => true, :slow_count => 5 }))
 
-require 'statful-aspects'
+require 'statful-client-aop'
