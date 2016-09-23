@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |s|
   s.name          = 'statful-client-aop'
-  s.version       =  '1.0.0'
+  s.version       =  '1.0.1'
   s.summary       = 'Statful Ruby Client for Aspect-Oriented Programming'
   s.description   = 'Statful Ruby Client for Aspect-Oriented Programming (https://www.statful.com)'
   s.license       = 'MIT'
